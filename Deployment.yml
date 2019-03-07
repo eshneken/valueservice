@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: valueservice
-  replicas: 2 
+  replicas: 1
   template: 
     metadata:
       labels:
@@ -15,9 +15,11 @@ spec:
     spec:
       containers:
       - name: valueservice
-        image: eshneken/valueservice:latest
+        image: iad.ocir.io/orasenatdecaentegacpgut02/eshneken_ocir/valueservice:latest
         ports:
         - containerPort: 80
+      imagePullSecrets:
+        - name: ocir
 ---
 kind: Service
 apiVersion: v1
