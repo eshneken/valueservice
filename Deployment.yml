@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: valueservice
-        image: iad.ocir.io/orasenatdecaentegacpgut02/eshneken_ocir/valueservice:latest
+        image: iad.ocir.io/orasenatdecaentegacpgut02/eshneken_ocir/valueservice:BUILD_NUMBER
         imagePullPolicy: Always
         ports:
         - containerPort: 80
